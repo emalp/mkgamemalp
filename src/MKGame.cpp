@@ -24,9 +24,11 @@ void MKGame::setPlayerColors(){
 	cout << endl;
 	int humanColor;
 
-	cout << "Which color would you like to play as, black or white? (1 = black, -1 = white): " << endl;
-	cin >> humanColor;
-
+	while(humanColor != 1 && humanColor != 1){
+		cout << "Which color would you like to play as, black or white? (1 = black, -1 = white): " << endl;
+		cin >> humanColor;
+	}
+	
 	players[1]->setColor(humanColor);
 	if(humanColor == 1){
 		players[0]->setColor(-1);
